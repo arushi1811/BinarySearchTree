@@ -100,3 +100,113 @@ line-height: 35px;
 color: #F2EADE;
 cursor: pointer;
 }
+
+.tree {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    align-items:center;
+
+}
+
+.layer {
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    justify-content: space-around;
+}
+
+
+
+
+.node {
+    background: #FFFFFF;
+border: 2px solid #CBA692;
+height: 40px;
+width: 40px;
+border-radius: 50%;
+font-family: 'Roboto', sans-serif;
+font-style: bold;
+font-weight: normal;
+font-size: auto;
+/* identical to box height */
+
+
+color: #80786B;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.node2 {
+    background: #756773;
+border: 2px solid #C4C4C4;
+height: 40px;
+width: 40px;
+border-radius: 50%;
+font-family: 'Roboto', sans-serif;
+font-style: bold;
+font-weight: normal;
+font-size: auto;
+/* identical to box height */
+
+
+color: #FFFFFF;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+
+td {
+    width: 40px;
+    height: 40px;
+}
+
+@keyframes traversing {
+    from {
+        color: #80786B;
+        background: #FFFFFF;
+        border: 2px solid #CBA692;
+    }
+    to {
+        color: #FFFFFF;
+        background: #756773;
+        border: 2px solid #C4C4C4;
+    }
+}
+
+.output {
+    width: 50vw;
+height: 80px;
+    background: #F2EADE;
+border: 1px solid #F2EADE;
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+bottom: 7vh;
+position: fixed;
+margin-left: 25vw;;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+}
+
+.output h4 {
+    font-family: 'Roboto', sans-serif;font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 35px;
+    background: inherit;
+}
+
+
+
+
+
+
+
