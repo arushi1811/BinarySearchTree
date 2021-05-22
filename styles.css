@@ -1,0 +1,102 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background: #FCF6EE;
+}
+
+.header {
+    background: #61545F;
+    height: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    background: #61545F;
+    font-family: 'Hammersmith One', sans-serif;font-style: normal;
+font-weight: normal;
+font-size: 64px;
+line-height: 80px;
+
+color: #F2EADE;
+}
+
+.actions {
+    margin-top: 3vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.control {
+    display: flex;
+    width: 30vw;
+    justify-content: space-evenly;
+}
+
+.traversals {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30vw;
+}
+
+.insert, .delete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer {
+    background: #61545F;
+    position: fixed;
+    bottom: 0;
+    height: 6vh;
+    width: 100%;
+}
+
+input {
+    width: 80px;
+height: 25px;
+
+background: #F7F5F3;
+border: 1px solid #61545F;
+box-sizing: border-box;
+margin-right: 10px;
+}
+
+
+
+#delete-btn, #insert-btn {
+    font-family: 'Roboto', sans-serif;font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 35px;
+    background: #61545F;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 80px;
+    height: 35px;
+    cursor: pointer;
+    color: #F2EADE;
+}
+
+.traversals button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+height: 30px;
+border: none;
+border: 1px solid #CBA692;
+    background: #61545F;
+border-radius: 30px;
+font-family: 'Roboto', sans-serif;font-style: normal;
+font-weight: bold;
+font-size: 15px;
+line-height: 35px;
+
+color: #F2EADE;
+cursor: pointer;
+}
