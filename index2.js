@@ -123,19 +123,24 @@ function insert() {
   }
 }
 
-function remAndAdd(id, class1, class2) {
-  document.getElementById(id).classList.remove(class1);
-  document.getElementById(id).classList.add(class2);
-}
 
-function pause(milliseconds) {
-	var dt = new Date();
-	while ((new Date()) - dt <= milliseconds) { /* Do nothing */ }
-}
 
 function del() {
   //error check for value!= int and value==null
   //error check for value not exist
+}
+
+function toggleNode(id) {
+  document.getElementById(id).classList.toggle("node2");
+}
+
+function animateTrav(order) {
+  for (let i=0; i<order.length; i++) {
+    setTimeout(toggleNode,(i+1)*1000, order[i]);
+    setTimeout(toggleNode, (order.length+1)*1000, order[i]);
+  }
+
+
 }
 
 function inorder() {
@@ -145,32 +150,67 @@ function inorder() {
   }
 
   else {
-    inTrav(tree.root);
+    let order = inTrav(tree.root,[]);
+    animateTrav(order);
   }
   
 }
 
-function inTrav(r) {
+function inTrav(r,order) {
   if (r!=null) {
 
-    inTrav(r.left)
+    inTrav(r.left, order)
+    
+    // document.getElementById(r.traversal).classList.toggle("node2")
+    order.push(r.traversal);
 
-    remAndAdd(r.traversal, "node", "node2")
-    pause(1000);
-    remAndAdd(r.traversal,"node2","node");    
-    console.log(r.value);
-
-    inTrav(r.right);
+    inTrav(r.right, order);
   }
-
+  return order;
 }
 
 function preorder() {
   //check for empty tree
+  if (tree.root===null) {
+    alert('The tree is empty.');
+  }
+  else {
+    let order = preTrav(tree.root, []);
+    animateTrav(order);
+  }
+}
+
+function preTrav(r, order) {
+  if (r!=null) {
+    order.push(r.traversal);
+
+    preTrav(r.left, order);
+
+    preTrav(r.right, order);
+  }
+  return order
 }
 
 function postorder() {
   //check for empty tree
+  if (tree.root===null) {
+    alert('The tree is empty.');
+  }
+  else {
+    let order = postTrav(tree.root, []);
+    animateTrav(order);
+  }
+}
+
+function postTrav(r, order) {
+  if (r!=null) {
+    preTrav(r.left, order);
+    
+    preTrav(r.right, order);
+
+    order.push(r.traversal);
+  }
+  return order
 }
 
 function drawline(from, to) {
