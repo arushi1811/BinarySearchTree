@@ -1,5 +1,5 @@
 document.querySelector("#insert-btn").addEventListener("click", insert);
-document.querySelector("#delete-btn").addEventListener("click", del);
+// document.querySelector("#delete-btn").addEventListener("click", del);
 document.querySelector("#inorder").addEventListener("click", inorder);
 document.querySelector("#preorder").addEventListener("click", preorder);
 document.querySelector("#postorder").addEventListener("click", postorder);
